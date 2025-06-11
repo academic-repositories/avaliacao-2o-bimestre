@@ -78,3 +78,20 @@ h2 {
   font-weight: 600;
   margin-bottom: 1.2rem;
 }
+
+button, .btn {
+  padding: 0.7rem 1.3rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, .btn:hover {
+  background: var(--primary-light);
+}
