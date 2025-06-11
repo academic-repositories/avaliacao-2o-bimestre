@@ -1,164 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
-  --primary: #2563eb;
-  --primary-light: #3b82f6;
-  --background: #f9fafb;
-  --text: #18181b;
-  --card-bg: #fff;
-  --border: #e5e7eb;
-  --radius: 10px;
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --background: #f9fafb;
+    --text: #18181b;
+    --card-bg: #fff;
+    --border: #e5e7eb;
+    --radius: 10px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
-  background: var(--background);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-  background: var(--primary);
-  color: #fff;
-  padding: 1.2rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    background: var(--primary);
+    color: #fff;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 nav {
-  display: flex;
-  gap: 1.2rem;
+    display: flex;
+    gap: 1.2rem;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
 }
 nav a:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 footer {
-  background: var(--primary);
-  color: #fff;
-  text-align: center;
-  padding: 0.8rem 0;
-  font-size: 0.95rem;
-  margin-top: auto;
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+    margin-top: auto;
 }
 
 .main-container {
-  width: 100%;
-  max-width: 900px;
-  margin: 2.5rem auto 2rem auto;
-  padding: 2rem;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 16px rgba(37, 99, 235, 0.04);
+    width: 100%;
+    max-width: 900px;
+    margin: 2.5rem auto 2rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 16px rgba(37, 99, 235, 0.04);
 }
 
 h2 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
 }
 
 button, .btn {
-  padding: 0.7rem 1.3rem;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius);
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s;
+    padding: 0.7rem 1.3rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
 button:hover, .btn:hover {
-  background: var(--primary-light);
+    background: var(--primary-light);
 }
 
 input[type="text"], input[type="email"], input[type="tel"], select, textarea {
-  width: 100%;
-  padding: 0.65rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  font-family: inherit;
-  font-size: 1rem;
-  margin-bottom: 1.1rem;
-  background: #f4f6fa;
-  color: var(--text);
-  transition: border 0.2s;
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 1.1rem;
+    background: #f4f6fa;
+    color: var(--text);
+    transition: border 0.2s;
 }
 
 input:focus, select:focus, textarea:focus {
-  border: 1.5px solid var(--primary);
-  outline: none;
+    border: 1.5px solid var(--primary);
+    outline: none;
 }
 
 .card-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.3rem;
 }
 
 .card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 1px 8px rgba(37, 99, 235, 0.03);
-  padding: 1.4rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 8px rgba(37, 99, 235, 0.03);
+    padding: 1.4rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
 .card .type {
-  font-size: 0.97rem;
-  font-weight: 600;
-  color: var(--primary);
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: var(--primary);
 }
 
 .card .title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .card .desc {
-  font-size: 0.98rem;
-  color: #475569;
-  margin-bottom: 0.2rem;
+    font-size: 0.98rem;
+    color: #475569;
+    margin-bottom: 0.2rem;
 }
 
 .card .institution {
-  font-size: 0.94rem;
-  color: #64748b;
-  margin-bottom: 0.15rem;
+    font-size: 0.94rem;
+    color: #64748b;
+    margin-bottom: 0.15rem;
 }
 
 .card .contact {
-  font-size: 0.94rem;
-  color: #2563eb;
-  margin-top: 0.15rem;
+    font-size: 0.94rem;
+    color: #2563eb;
+    margin-top: 0.15rem;
 }
 
 /* Responsividade */
