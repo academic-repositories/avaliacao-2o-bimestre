@@ -113,3 +113,50 @@ input:focus, select:focus, textarea:focus {
   border: 1.5px solid var(--primary);
   outline: none;
 }
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.3rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 8px rgba(37, 99, 235, 0.03);
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.card .type {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.card .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card .desc {
+  font-size: 0.98rem;
+  color: #475569;
+  margin-bottom: 0.2rem;
+}
+
+.card .institution {
+  font-size: 0.94rem;
+  color: #64748b;
+  margin-bottom: 0.15rem;
+}
+
+.card .contact {
+  font-size: 0.94rem;
+  color: #2563eb;
+  margin-top: 0.15rem;
+}
