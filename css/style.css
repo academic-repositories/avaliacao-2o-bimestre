@@ -163,5 +163,8 @@ input:focus, select:focus, textarea:focus {
 
 /* Responsividade */
 @media (max-width: 600px) {
-
+    .main-container {
+        padding: 1rem 0.5rem;
+        margin: 1rem 0;
+  }
 }
