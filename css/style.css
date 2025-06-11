@@ -163,8 +163,17 @@ input:focus, select:focus, textarea:focus {
 
 /* Responsividade */
 @media (max-width: 600px) {
+    header h1 {
+        font-size: 1rem;
+    }
     .main-container {
         padding: 1rem 0.5rem;
         margin: 1rem 0;
-  }
+    }
+    header, footer {
+        padding: 1rem;
+    }
+    nav {
+        gap: 0.7rem;
+    }
 }
