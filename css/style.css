@@ -160,3 +160,8 @@ input:focus, select:focus, textarea:focus {
   color: #2563eb;
   margin-top: 0.15rem;
 }
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+}
