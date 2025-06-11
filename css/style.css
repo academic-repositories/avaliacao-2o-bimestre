@@ -24,3 +24,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
