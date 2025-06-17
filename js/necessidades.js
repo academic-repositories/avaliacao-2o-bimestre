@@ -11,5 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
       return [];
     }
   }
+
+  function gerarCard(necessidade) {
+    return `
+      <div class="card">
+        <div class="type">${necessidade.tipoAjuda}</div>
+        <div class="title">${necessidade.titulo}</div>
+        <div class="desc">${necessidade.descricao}</div>
+        <div class="institution"><b>Instituição:</b> ${necessidade.instituicao}</div>
+        <div class="institution"><b>Endereço:</b> ${necessidade.rua}, ${necessidade.bairro}, ${necessidade.cidade} - ${necessidade.estado} | CEP: ${necessidade.cep}</div>
+        <div class="contact"><b>Contato:</b> ${necessidade.contato}</div>
+      </div>
+    `;
+  }
   
 });
