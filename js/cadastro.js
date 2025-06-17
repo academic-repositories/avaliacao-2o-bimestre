@@ -87,4 +87,37 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('necessidades', JSON.stringify(necessidades));
     }
 
+    form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    msgErro.textContent = '';
+    msgSucesso.textContent = '';
+
+    if (!validarFormulario()) return;
+
+    const dados = {
+      instituicao: form.instituicao.value.trim(),
+      tipoAjuda: form['tipo-ajuda'].value,
+      titulo: form.titulo.value.trim(),
+      descricao: form.descricao.value.trim(),
+      cep: form.cep.value.trim(),
+      rua: form.rua.value.trim(),
+      bairro: form.bairro.value.trim(),
+      cidade: form.cidade.value.trim(),
+      estado: form.estado.value.trim(),
+      contato: form.contato.value.trim(),
+      dataCadastro: new Date().toISOString()
+    };
+
+    salvarNecessidade(dados);
+
+    msgSucesso.textContent = 'Necessidade cadastrada com sucesso!';
+    form.reset();
+
+    document.querySelector('.main-container').scrollIntoView({ behavior: 'smooth' });
+
+    if (typeof mostrarMensagemRapida === "function") {
+      mostrarMensagemRapida('Necessidade cadastrada!', 'sucesso');
+    }
+  });
 });
