@@ -76,5 +76,15 @@ document.addEventListener('DOMContentLoaded', function () {
     return true;
   }
 
+    function salvarNecessidade(dados) {
+        let necessidades = [];
+        try {
+        necessidades = JSON.parse(localStorage.getItem('necessidades')) || [];
+        } catch (e) {
+        necessidades = [];
+        }
+        necessidades.push(dados);
+        localStorage.setItem('necessidades', JSON.stringify(necessidades));
+    }
 
 });
