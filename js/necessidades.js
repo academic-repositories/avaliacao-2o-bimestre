@@ -50,5 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
       nenhumResultado.style.display = 'none';
     }
   }
-  
+
+  pesquisaInput.addEventListener('input', exibirNecessidades);
+  filtroTipo.addEventListener('change', exibirNecessidades);
+
+  exibirNecessidades();
 });
