@@ -24,5 +24,31 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     `;
   }
+
+  function exibirNecessidades() {
+    const todas = obterNecessidades();
+    let filtradas = todas;
+
+    const tipo = filtroTipo.value;
+    if (tipo) {
+      filtradas = filtradas.filter(n => n.tipoAjuda === tipo);
+    }
+
+    const termo = pesquisaInput.value.trim().toLowerCase();
+    if (termo) {
+      filtradas = filtradas.filter(n =>
+        n.titulo.toLowerCase().includes(termo) ||
+        n.descricao.toLowerCase().includes(termo)
+      );
+    }
+
+    if (filtradas.length === 0) {
+      lista.innerHTML = '';
+      nenhumResultado.style.display = 'block';
+    } else {
+      lista.innerHTML = filtradas.map(gerarCard).join('');
+      nenhumResultado.style.display = 'none';
+    }
+  }
   
 });
