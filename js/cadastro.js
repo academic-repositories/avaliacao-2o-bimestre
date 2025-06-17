@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cepInput.addEventListener('blur', function () {
         const cep = cepInput.value.replace(/\D/g, '');
-        if (cep.length !== 8) return; // ignora CEP inválido
+        if (cep.length !== 8) return;
 
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
             .then(resp => resp.json())
