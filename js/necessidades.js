@@ -3,4 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const nenhumResultado = document.getElementById('nenhum-resultado');
   const pesquisaInput = document.getElementById('pesquisa');
   const filtroTipo = document.getElementById('filtro-tipo');
+
+  function obterNecessidades() {
+    try {
+      return JSON.parse(localStorage.getItem('necessidades')) || [];
+    } catch (e) {
+      return [];
+    }
+  }
+  
 });
