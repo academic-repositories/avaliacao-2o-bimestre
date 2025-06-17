@@ -36,5 +36,45 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 
-  
+  function validarFormulario() {
+    const campos = [
+      { id: 'instituicao', nome: 'Nome da Instituição' },
+      { id: 'tipo-ajuda', nome: 'Tipo de Ajuda' },
+      { id: 'titulo', nome: 'Título da Necessidade' },
+      { id: 'descricao', nome: 'Descrição Detalhada' },
+      { id: 'cep', nome: 'CEP' },
+      { id: 'rua', nome: 'Rua' },
+      { id: 'bairro', nome: 'Bairro' },
+      { id: 'cidade', nome: 'Cidade' },
+      { id: 'estado', nome: 'Estado' },
+      { id: 'contato', nome: 'Contato' }
+    ];
+    for (const campo of campos) {
+      if (!form[campo.id].value.trim()) {
+        msgErro.textContent = `Preencha o campo: ${campo.nome}`;
+        form[campo.id].focus();
+        return false;
+      }
+    }
+
+    if (!/^\d{5}-?\d{3}$/.test(form.cep.value.trim())) {
+      msgErro.textContent = 'Digite um CEP válido (00000-000)';
+      form.cep.focus();
+      return false;
+    }
+
+    const contato = form.contato.value.trim();
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contato);
+    const telValido = /^(\(?\d{2}\)?\s?)?(\d{4,5}-?\d{4})$/.test(contato);
+
+    if (!emailValido && !telValido) {
+      msgErro.textContent = 'Digite um e-mail ou telefone válido!';
+      form.contato.focus();
+      return false;
+    }
+
+    return true;
+  }
+
+
 });
