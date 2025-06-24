@@ -119,5 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (typeof mostrarMensagemRapida === "function") {
             mostrarMensagemRapida('Necessidade cadastrada!', 'sucesso');
         }
+
+        alert("Necessidade cadastrada com sucesso!");
     });
 });
